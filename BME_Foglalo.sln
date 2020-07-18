@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BME Foglalo", "BME Foglalo\BME Foglalo.vcxproj", "{A0274160-E574-4259-A0D1-AD9061A52A3D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BME Foglalo Szerver", "..\BME_Foglalo_Szerver\BME Foglalo Szerver\BME Foglalo Szerver.vcxproj", "{722DECB5-33C6-48E6-9BE1-7406A0657EAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{A0274160-E574-4259-A0D1-AD9061A52A3D}.Release|x64.Build.0 = Release|x64
 		{A0274160-E574-4259-A0D1-AD9061A52A3D}.Release|x86.ActiveCfg = Release|Win32
 		{A0274160-E574-4259-A0D1-AD9061A52A3D}.Release|x86.Build.0 = Release|Win32
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Debug|x64.ActiveCfg = Debug|x64
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Debug|x64.Build.0 = Debug|x64
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Debug|x86.ActiveCfg = Debug|Win32
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Debug|x86.Build.0 = Debug|Win32
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Release|x64.ActiveCfg = Release|x64
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Release|x64.Build.0 = Release|x64
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Release|x86.ActiveCfg = Release|Win32
+		{722DECB5-33C6-48E6-9BE1-7406A0657EAB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
