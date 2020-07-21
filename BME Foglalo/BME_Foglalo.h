@@ -16,6 +16,7 @@ private:
 		olc::vi2d midPoint; // A képszerkesztő alapján ez lesz a középppontja a megyéknek (ez alapján lehet kijelölni őket)
 		bool highlight = false; // Ki legyen-e jelölve rajzoláskor
 		olc::Pixel color = olc::RED; // A kijelölés színe
+		std::vector<DecPos*> neighbours; //szomszédok eltárolása
 	};
 
 	// A kijelölt megyéhez használt változók
@@ -32,4 +33,6 @@ public:
 	// Csak 1-szer futnak le az itt leírt dolgok, inicializáláshoz tökéletes
 	bool OnUserCreate() override;
 	bool OnUserUpdate(float fElapsedTime) override;
+
+	bool contains(const std::vector<BME_Foglalo::DecPos*>& vector, DecPos* number);
 };

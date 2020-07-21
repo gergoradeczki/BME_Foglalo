@@ -21,6 +21,7 @@ bool BME_Foglalo::OnUserCreate() {
 	// A képszerkesztőből kinyert adatok
 	// Az értékek az eredeti képméretből származnak, ezt később átszámolom egy ciklussal
 	magyarorszag[0] = { magyarorszag[0].spr, magyarorszag[0].dec, {730, 603}, {396, 494} };
+	
 	magyarorszag[1] = { magyarorszag[1].spr, magyarorszag[1].dec, {417, 892}, {348, 273} };
 	magyarorszag[2] = { magyarorszag[2].spr, magyarorszag[2].dec, {1199, 557}, {350, 395} };
 	magyarorszag[3] = { magyarorszag[3].spr, magyarorszag[3].dec, {1093, 5}, {553, 377} };
@@ -40,6 +41,105 @@ bool BME_Foglalo::OnUserCreate() {
 	magyarorszag[17] = { magyarorszag[17].spr, magyarorszag[17].dec, {273, 457}, {325, 293} };
 	magyarorszag[18] = { magyarorszag[18].spr, magyarorszag[18].dec, {73, 632}, {289, 301} };
 	magyarorszag[19] = { magyarorszag[19].spr, magyarorszag[19].dec, {0,0}, {0,0} };
+
+	//szomszédság felépítése 
+	magyarorszag[0].neighbours.push_back(&magyarorszag[1]);
+	magyarorszag[0].neighbours.push_back(&magyarorszag[4]);
+	magyarorszag[0].neighbours.push_back(&magyarorszag[9]);
+	magyarorszag[0].neighbours.push_back(&magyarorszag[12]);
+	magyarorszag[0].neighbours.push_back(&magyarorszag[5]);
+	magyarorszag[0].neighbours.push_back(&magyarorszag[15]);
+
+	magyarorszag[1].neighbours.push_back(&magyarorszag[0]);
+	magyarorszag[1].neighbours.push_back(&magyarorszag[15]);
+	magyarorszag[1].neighbours.push_back(&magyarorszag[13]);
+
+	magyarorszag[2].neighbours.push_back(&magyarorszag[4]);
+	magyarorszag[2].neighbours.push_back(&magyarorszag[7]);
+	magyarorszag[2].neighbours.push_back(&magyarorszag[9]);
+
+	magyarorszag[3].neighbours.push_back(&magyarorszag[14]);
+	magyarorszag[3].neighbours.push_back(&magyarorszag[7]);
+	magyarorszag[3].neighbours.push_back(&magyarorszag[8]);
+	magyarorszag[3].neighbours.push_back(&magyarorszag[11]);
+
+	magyarorszag[4].neighbours.push_back(&magyarorszag[0]);
+	magyarorszag[4].neighbours.push_back(&magyarorszag[2]);
+	magyarorszag[4].neighbours.push_back(&magyarorszag[9]);
+
+	magyarorszag[5].neighbours.push_back(&magyarorszag[0]);
+	magyarorszag[5].neighbours.push_back(&magyarorszag[10]);
+	magyarorszag[5].neighbours.push_back(&magyarorszag[13]);
+	magyarorszag[5].neighbours.push_back(&magyarorszag[12]);
+	magyarorszag[5].neighbours.push_back(&magyarorszag[17]);
+	magyarorszag[5].neighbours.push_back(&magyarorszag[15]);
+
+	magyarorszag[6].neighbours.push_back(&magyarorszag[10]);
+	magyarorszag[6].neighbours.push_back(&magyarorszag[17]);
+	magyarorszag[6].neighbours.push_back(&magyarorszag[16]);
+
+	magyarorszag[7].neighbours.push_back(&magyarorszag[14]);
+	magyarorszag[7].neighbours.push_back(&magyarorszag[3]);
+	magyarorszag[7].neighbours.push_back(&magyarorszag[9]);
+	magyarorszag[7].neighbours.push_back(&magyarorszag[2]);
+
+	magyarorszag[8].neighbours.push_back(&magyarorszag[3]);
+	magyarorszag[8].neighbours.push_back(&magyarorszag[9]);
+	magyarorszag[8].neighbours.push_back(&magyarorszag[12]);
+	magyarorszag[8].neighbours.push_back(&magyarorszag[11]);
+
+	magyarorszag[9].neighbours.push_back(&magyarorszag[4]);
+	magyarorszag[9].neighbours.push_back(&magyarorszag[7]);
+	magyarorszag[9].neighbours.push_back(&magyarorszag[0]);
+	magyarorszag[9].neighbours.push_back(&magyarorszag[2]);
+	magyarorszag[9].neighbours.push_back(&magyarorszag[12]);
+	magyarorszag[9].neighbours.push_back(&magyarorszag[8]);
+
+	magyarorszag[10].neighbours.push_back(&magyarorszag[6]);
+	magyarorszag[10].neighbours.push_back(&magyarorszag[17]);
+	magyarorszag[10].neighbours.push_back(&magyarorszag[5]);
+	magyarorszag[10].neighbours.push_back(&magyarorszag[12]);
+
+	magyarorszag[11].neighbours.push_back(&magyarorszag[3]);
+	magyarorszag[11].neighbours.push_back(&magyarorszag[8]);
+	magyarorszag[11].neighbours.push_back(&magyarorszag[12]);
+
+	magyarorszag[12].neighbours.push_back(&magyarorszag[0]);
+	magyarorszag[12].neighbours.push_back(&magyarorszag[10]);
+	magyarorszag[12].neighbours.push_back(&magyarorszag[5]);
+	magyarorszag[12].neighbours.push_back(&magyarorszag[11]);
+	magyarorszag[12].neighbours.push_back(&magyarorszag[8]);
+	magyarorszag[12].neighbours.push_back(&magyarorszag[9]);
+
+	magyarorszag[13].neighbours.push_back(&magyarorszag[1]);
+	magyarorszag[13].neighbours.push_back(&magyarorszag[15]);
+	magyarorszag[13].neighbours.push_back(&magyarorszag[5]);
+	magyarorszag[13].neighbours.push_back(&magyarorszag[17]);
+	magyarorszag[13].neighbours.push_back(&magyarorszag[18]);
+
+	magyarorszag[14].neighbours.push_back(&magyarorszag[3]);
+	magyarorszag[14].neighbours.push_back(&magyarorszag[7]);
+
+	magyarorszag[15].neighbours.push_back(&magyarorszag[0]);
+	magyarorszag[15].neighbours.push_back(&magyarorszag[1]);
+	magyarorszag[15].neighbours.push_back(&magyarorszag[5]);
+	magyarorszag[15].neighbours.push_back(&magyarorszag[13]);
+
+	magyarorszag[16].neighbours.push_back(&magyarorszag[18]);
+	magyarorszag[16].neighbours.push_back(&magyarorszag[17]);
+	magyarorszag[16].neighbours.push_back(&magyarorszag[6]);
+
+	magyarorszag[17].neighbours.push_back(&magyarorszag[18]);
+	magyarorszag[17].neighbours.push_back(&magyarorszag[16]);
+	magyarorszag[17].neighbours.push_back(&magyarorszag[13]);
+	magyarorszag[17].neighbours.push_back(&magyarorszag[10]);
+	magyarorszag[17].neighbours.push_back(&magyarorszag[6]);
+	magyarorszag[17].neighbours.push_back(&magyarorszag[5]);	
+
+	magyarorszag[18].neighbours.push_back(&magyarorszag[13]);
+	magyarorszag[18].neighbours.push_back(&magyarorszag[17]);
+	magyarorszag[18].neighbours.push_back(&magyarorszag[16]);
+
 
 	/*
 	Mivel az ablak méretét HD-ra lőttem be (1280x720p), ezért a megyék nem férnének ki
@@ -63,7 +163,7 @@ bool BME_Foglalo::OnUserCreate() {
 bool BME_Foglalo::OnUserUpdate(float fElapsedTime) {
 	// A kép megtisztítása
 	Clear(olc::GREY);
-
+	
 	// Legközelebbi megye megkeresése
 	// Ebben a ciklusban rendezem le az előzőleg legközelebbinek megjelölt megye színének a visszaállítását
 	for (int i = 0; i < 19; i++) {
@@ -84,11 +184,23 @@ bool BME_Foglalo::OnUserUpdate(float fElapsedTime) {
 
 	// Megyék majd a határvonalak megrajzolása
 	// Ha megrajzolod a megyéket, akkor a középpontok nem fognak látszani (BUG?)
+	
+	std::vector<DecPos*> alreadyDrawn; //a már kirajzolt megyék listázása (csak a sárga szomszédos megyék kirajolásához szükséges)
 	for (int i = 0; i < 20; i++) {
+		if(contains(alreadyDrawn,magyarorszag+i))//ha már ki van rajzolva egy megye, akkor skippeli a kirajzolását (a sárga megyéknél fordul ez elő)
+			continue;
 		if (magyarorszag[i].highlight) {
 			// Itt történik a képek fele akkora megjelenítése { 0.5,0.5 }, ez egy transzformáció
 			DrawDecal(magyarorszag[i].pos, magyarorszag[i].dec, { 0.5,0.5 }, magyarorszag[i].color);
 			DrawCircle(magyarorszag[i].midPoint, 2, olc::RED);
+
+			alreadyDrawn.push_back(&magyarorszag[i]);
+			//szomszédos megyék kirajzolása
+			for (int j = 0; j < magyarorszag[i].neighbours.size(); j++) {
+				DrawDecal(magyarorszag[i].neighbours[j]->pos, magyarorszag[i].neighbours[j]->dec, { 0.5,0.5 }, olc::YELLOW);//magyarorszag[j].neighbours[j]->color);
+				DrawCircle(magyarorszag[i].neighbours[j]->midPoint, 2, olc::DARK_BLUE);
+				alreadyDrawn.push_back(magyarorszag[i].neighbours[j]);
+			}
 		}
 		else {
 			// Itt történik a képek fele akkora megjelenítése { 0.5,0.5 }, ez egy transzformáció
@@ -106,4 +218,12 @@ bool BME_Foglalo::OnUserUpdate(float fElapsedTime) {
 	minDistance = 19113;
 	minIndex = -1;
 	return true;
+}
+
+bool BME_Foglalo::contains(const std::vector<BME_Foglalo::DecPos*>& vector, DecPos* number) {
+	for (std::vector<DecPos*>::const_iterator iterator = vector.begin(); iterator != vector.end(); iterator++) {
+		if ((*iterator) == number)
+			return true;
+	}
+	return false;
 }
