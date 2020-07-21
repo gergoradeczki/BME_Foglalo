@@ -7,6 +7,5 @@ int main() {
 	// A Start()-ból csak akkor lép ki, ha false-ot ad vissza, vagy bezáródik az ablak
 	if (game.Construct(1280, 720, 1, 1))
 		game.Start();
-
 	return 0;
 }

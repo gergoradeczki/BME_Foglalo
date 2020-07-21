@@ -8,7 +8,7 @@ public:
 		sAppName = "BME Foglalo";
 	}
 private:
-
+	float lastupdate=0;
 	struct DecPos {
 		olc::Sprite* spr = nullptr; // A sprite pointerét tárolja
 		olc::Decal* dec = nullptr; // a decal pointerét tárolja
